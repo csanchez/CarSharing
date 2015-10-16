@@ -21,6 +21,14 @@
             android:name=".RegisterActivity"
             android:label="@string/title_activity_register" >
         </activity>
+        <activity
+            android:name=".InformationActivity"
+            android:label="@string/title_activity_information" >
+        </activity>
+        <activity
+            android:name=".TreeActivity"
+            android:label="@string/title_activity_tree" >
+        </activity>
     </application>
 
 </manifest>

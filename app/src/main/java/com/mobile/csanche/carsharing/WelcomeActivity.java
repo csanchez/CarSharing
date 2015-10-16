@@ -1,6 +1,7 @@
 package com.mobile.csanche.carsharing;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -16,6 +17,17 @@ public class WelcomeActivity extends ActionBarActivity {
         setContentView(R.layout.activity_welcome);
         sharedPref =  getPreferences(Context.MODE_PRIVATE);
         
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        //verificamos si ya inicio sesión el usuario
+        if(sharedPref.getBoolean("log_in",false)){
+
+        }else{
+            startActivity(new Intent(this, RegisterActivity.class));
+        }
     }
 
     @Override
